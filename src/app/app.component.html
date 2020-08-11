@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br/>
+            <div >
+                <h4 >{{ 'Choose language'| i18n }}</h4>
+                <button type="button" class="btn btn-primary" (click)="changeLng('en-US')">English</button>
+                <button type="button" class="btn btn-success" (click)="changeLng('fi-FI')">Finnish</button>
+                <button type="button" class="btn btn-warning" (click)="changeLng('bn-BD')">Bangla</button>
+            </div>
+            <br />
+            <input type="text" class="form-control" placeholder="Enter name" [(ngModel)]="name">
+            <h3 *ngIf="name"> {{'Welcome'|i18n}} {{this.name}}!</h3>
+            <p *ngIf="name"> {{'Thank you {name} for typing' | i18n:{name:name}  }}</p>
+        </div>
+    </div>
+</div>
