@@ -4,9 +4,14 @@
             <br/>
             <div >
                 <h4 >{{ 'Choose language'| i18n }}</h4>
-                <button type="button" class="btn btn-primary" (click)="changeLng('en-US')">English</button>
+                <button type="button" class="btn btn-primary" title="{{'Choose language'| i18n}}" (click)="changeLng('en-US')">English</button>
                 <button type="button" class="btn btn-success" (click)="changeLng('fi-FI')">Finnish</button>
                 <button type="button" class="btn btn-warning" (click)="changeLng('bn-BD')">Bangla</button>
+                <scale-icon-action-arrow-up accessibility-title="foobar"></scale-icon-action-arrow-up>
+                <scale-button> {{ 'Choose language'| i18n }} </scale-button>
+                <scale-icon-action-arrow-left [attr.accessibility-title]="'Choose language' | i18n"></scale-icon-action-arrow-left>
+                
+
             </div>
             <br />
             <input type="text" class="form-control" placeholder="Enter name" [(ngModel)]="name">
